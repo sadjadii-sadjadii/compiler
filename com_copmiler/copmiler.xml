@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+    <name>COM_COPMILER</name>
+    <author>Sadjadii</author>
+    <creationDate>2026-11-24</creationDate>
+    <copyright>(C) 2026 Sadjadii. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorUrl>https://github.com/sadjadii-sadjadii/compiler</authorUrl>
+    <version>1.0.0</version>
+    <description>COM_COPMILER_XML_DESCRIPTION</description>
+
+    <namespace path="src">Sadjadii\Component\Copmiler</namespace>
+    <scriptfile>script.php</scriptfile>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+
+    <media destination="com_copmiler" folder="media">
+        <filename>joomla.asset.json</filename>
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+
+    <administration>
+        <menu img="class:cogs">COM_COPMILER</menu>
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <folder>services</folder>
+            <folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+        </files>
+        <languages folder="admin/language">
+            <language tag="en-GB">en-GB/com_copmiler.ini</language>
+            <language tag="en-GB">en-GB/com_copmiler.sys.ini</language>
+            <language tag="fa-IR">fa-IR/com_copmiler.ini</language>
+            <language tag="fa-IR">fa-IR/com_copmiler.sys.ini</language>
+        </languages>
+    </administration>
+</extension>

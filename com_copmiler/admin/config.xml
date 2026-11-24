@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="compiler" label="COM_COPMILER_CONFIG_COMPILER_LABEL">
+        <field
+            name="default_mode"
+            type="list"
+            label="COM_COPMILER_CONFIG_DEFAULT_MODE_LABEL"
+            description="COM_COPMILER_CONFIG_DEFAULT_MODE_DESC"
+            default="hybrid"
+        >
+            <option value="hybrid">COM_COPMILER_MODE_HYBRID</option>
+            <option value="native">COM_COPMILER_MODE_NATIVE</option>
+        </field>
+        <field
+            name="vendor_namespace"
+            type="text"
+            label="COM_COPMILER_CONFIG_VENDOR_NS_LABEL"
+            description="COM_COPMILER_CONFIG_VENDOR_NS_DESC"
+            default="WpCompiled"
+            filter="cmd"
+        />
+        <field
+            name="max_upload_mb"
+            type="number"
+            label="COM_COPMILER_CONFIG_MAX_UPLOAD_LABEL"
+            description="COM_COPMILER_CONFIG_MAX_UPLOAD_DESC"
+            default="25"
+            min="1"
+            max="200"
+        />
+    </fieldset>
+
+    <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+        <field
+            name="rules"
+            type="rules"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            filter="rules"
+            validate="rules"
+            component="com_copmiler"
+            section="component"
+        />
+    </fieldset>
+</config>

@@ -1,0 +1,1 @@
+-- Initial schema version 1.0.0 for com_copmiler

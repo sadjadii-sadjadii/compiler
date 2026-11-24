@@ -1,0 +1,22 @@
+{
+    "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+    "name": "com_copmiler",
+    "version": "1.0.0",
+    "description": "WordPress to Joomla 6 Compiler assets",
+    "license": "GPL-2.0-or-later",
+    "assets": [
+        {
+            "name": "com_copmiler.admin",
+            "type": "style",
+            "uri": "com_copmiler/copmiler.css"
+        },
+        {
+            "name": "com_copmiler.admin",
+            "type": "script",
+            "uri": "com_copmiler/copmiler.js",
+            "attributes": {
+                "defer": true
+            }
+        }
+    ]
+}

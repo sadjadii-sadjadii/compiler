@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS `#__copmiler_builds` (
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `wp_name` VARCHAR(255) NOT NULL DEFAULT '',
+    `wp_slug` VARCHAR(128) NOT NULL DEFAULT '',
+    `wp_version` VARCHAR(64) NOT NULL DEFAULT '1.0.0',
+    `compile_mode` VARCHAR(32) NOT NULL DEFAULT 'hybrid',
+    `detected_type` VARCHAR(32) NOT NULL DEFAULT 'plugin',
+    `plugin_group` VARCHAR(32) NOT NULL DEFAULT 'system',
+    `confidence` TINYINT UNSIGNED NOT NULL DEFAULT 0,
+    `compatibility_score` TINYINT UNSIGNED NOT NULL DEFAULT 0,
+    `element_name` VARCHAR(128) NOT NULL DEFAULT '',
+    `zip_filename` VARCHAR(255) NOT NULL DEFAULT '',
+    `zip_path` VARCHAR(512) NOT NULL DEFAULT '',
+    `zip_size` BIGINT UNSIGNED NOT NULL DEFAULT 0,
+    `report_json` LONGTEXT NULL,
+    `created` DATETIME NOT NULL,
+    `created_by` INT UNSIGNED NOT NULL DEFAULT 0,
+    PRIMARY KEY (`id`),
+    KEY `idx_wp_slug` (`wp_slug`),
+    KEY `idx_detected_type` (`detected_type`),
+    KEY `idx_created` (`created`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
